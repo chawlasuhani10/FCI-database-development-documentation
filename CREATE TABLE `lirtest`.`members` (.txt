@@ -1,0 +1,45 @@
+CREATE TABLE `lirtest`.`members` (
+  `member_id` INT NOT NULL AUTO_INCREMENT COMMENT '//stores the unique primary key to identify each member of the LIR program',
+  `last_name` VARCHAR(30) NOT NULL,
+  `first_name` VARCHAR(30) NOT NULL,
+  `alt_name` VARCHAR(30) NULL,
+  `street` VARCHAR(50) NOT NULL,
+  `street_2` VARCHAR(50) NULL,
+  `city` VARCHAR(50) NOT NULL,
+  `state` VARCHAR(2) NOT NULL,
+  `zipcode` VARCHAR(10) NOT NULL,
+  `phone_number` VARCHAR(15) NOT NULL,
+  `email` VARCHAR(50) NULL,
+  `emergency_name` VARCHAR(60) NOT NULL,
+  `emergency_phone` VARCHAR(15) NOT NULL,
+  `emergency_email` VARCHAR(50) NULL,
+  `emergency_rel` VARCHAR(20) NULL,
+  `date_joined` DATE NULL,
+  PRIMARY KEY (`member_id`),
+  UNIQUE INDEX `unique_key` (`first_name` ASC, `last_name` ASC, `date_joined` ASC) VISIBLE,
+  INDEX `mem_names` (`last_name` ASC, `first_name` ASC, `alt_name` ASC) VISIBLE);
+
+
+Executing:
+CREATE TABLE `lirtest`.`members` (
+  `member_id` INT NOT NULL AUTO_INCREMENT COMMENT '//stores the unique primary key to identify each member of the LIR program',
+  `last_name` VARCHAR(30) NOT NULL,
+  `first_name` VARCHAR(30) NOT NULL,
+  `alt_name` VARCHAR(30) NULL,
+  `street` VARCHAR(50) NOT NULL,
+  `street_2` VARCHAR(50) NULL,
+  `city` VARCHAR(50) NOT NULL,
+  `state` VARCHAR(2) NOT NULL,
+  `zipcode` VARCHAR(10) NOT NULL,
+  `phone_number` VARCHAR(15) NOT NULL,
+  `email` VARCHAR(50) NULL,
+  `emergency_name` VARCHAR(60) NOT NULL,
+  `emergency_phone` VARCHAR(15) NOT NULL,
+  `emergency_email` VARCHAR(50) NULL,
+  `emergency_rel` VARCHAR(20) NULL,
+  `date_joined` DATE NULL,
+  PRIMARY KEY (`member_id`),
+  UNIQUE INDEX `unique_key` (`first_name` ASC, `last_name` ASC, `date_joined` ASC) VISIBLE,
+  INDEX `mem_names` (`last_name` ASC, `first_name` ASC, `alt_name` ASC) VISIBLE);
+
+SQL script was successfully applied to the database.
